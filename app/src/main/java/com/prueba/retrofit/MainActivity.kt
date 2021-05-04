@@ -25,39 +25,34 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnUs: Button = findViewById(R.id.btnUs)
-        val btnCo: Button = findViewById(R.id.btnCo)
-        val btnRu: Button = findViewById(R.id.btnRu)
-        val btnCa: Button = findViewById(R.id.btnCa)
-
-        runSearch(type,place)
-
-        btnUs.setOnClickListener{
-            place = "us"
-            runSearch(type,place)
-        }
-        btnCo.setOnClickListener{
-            place = "co"
-            runSearch(type,place)
-        }
-        btnRu.setOnClickListener {
-            place = "ru"
-            runSearch(type,place)
-        }
-        btnCa.setOnClickListener {
-            place = "ca"
-            runSearch(type,place)
-        }
-
-    }
-
-    private fun runSearch(category:String, country:String){
         binding= ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.searchNews.setOnQueryTextListener(this)
 
         intRecyclerView()
         searchNew(type,place)
+
+        binding.btnUs.setOnClickListener{
+            place = "us"
+            searchNew(type,place)
+            showMessage("error")
+        }
+        binding.btnCo.setOnClickListener{
+            place = "co"
+            searchNew(type,place)
+            showMessage("error")
+        }
+        binding.btnRu.setOnClickListener {
+            place = "ru"
+            searchNew(type,place)
+            showMessage("error")
+        }
+        binding.btnCa.setOnClickListener {
+            place = "ca"
+            searchNew(type,place)
+            showMessage("error")
+        }
+
     }
 
     private fun intRecyclerView(){

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Retrofit</string>
+    <string name="us">US</string>
+    <string name="co">CO</string>
+    <string name="ca">CA</string>
+    <string name="ru">RU</string>
 </resources>

@@ -53,6 +53,27 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
             showMessage("error")
         }
 
+        binding.btnBusiness.setOnClickListener{
+            type = "business"
+            searchNew(type,place)
+            showMessage("error")
+        }
+        binding.btnHealth.setOnClickListener{
+            type = "health"
+            searchNew(type,place)
+            showMessage("error")
+        }
+        binding.btnScience.setOnClickListener {
+            type = "science"
+            searchNew(type,place)
+            showMessage("error")
+        }
+        binding.btnSports.setOnClickListener {
+            type = "sports"
+            searchNew(type,place)
+            showMessage("error")
+        }
+
     }
 
     private fun intRecyclerView(){

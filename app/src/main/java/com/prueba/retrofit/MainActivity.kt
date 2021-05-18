@@ -86,7 +86,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
         val api = Retrofit2()
 
         CoroutineScope(Dispatchers.IO).launch {
-            val call = api.getService()?.getNewsByCategory(country,category,"4b94054dbc6b4b3b9e50d8f62cde4f6c")
+            val call = api.getService()?.getNewsByCategory(country,category,"3cc67f2383ed433ba1646971765a2fbb")
             val news: NewsResponse? = call?.body()
 
             runOnUiThread{
